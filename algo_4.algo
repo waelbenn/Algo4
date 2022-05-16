@@ -1,0 +1,14 @@
+PROCEDURE TRI_INSERTION(VAR arr : TYPE_OF INTEGER, n : INTEGER)
+VAR
+   i, j, aux : INTEGER
+BEGIN
+   FOR i FROM 2 TO n PATH 1 DO
+		aux ← arr[i];
+		j ← i;
+		WHILE (arr[j – 1] > aux ) AND (j > 1) DO
+			arr[j]← arr[j-1];
+			j ← j-1;
+		END_WHILE;
+		arr[j]← aux
+     END_FOR
+END
